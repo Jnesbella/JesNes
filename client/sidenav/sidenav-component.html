@@ -1,0 +1,17 @@
+<md-sidenav md-component-id="left" xmd-component-id="{{$ctrl.navId}}" class="md-sidenav-left">
+  <md-toolbar class="md-tall" md-scroll-shrink="true" md-shrink-speed-factor="0.5">
+    <div class="md-toolbar-tools">
+      {{$ctrl.data().title}}
+    </div>
+  </md-toolbar>
+
+  <md-content>
+    <md-list>
+      <md-list-item ng-repeat="(key, value) in $ctrl.data()" ng-if="value && value.label" ui-sref="{{value.state}}({title: '{{value.label}}'})">
+        <div class="md-list-item-text">
+          {{value.label}}
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</md-sidenav>

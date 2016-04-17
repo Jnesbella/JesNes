@@ -1,0 +1,24 @@
+<html ng-app="JesNes">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>JesNes</title>
+
+    <link rel="stylesheet" href="./css/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+
+  <body>
+    <div layout="column" layout-fill ng-cloak ng-controller="AppController">
+      <toolbar toolbar-id="main"></toolbar>
+
+      <sidenav nav-id="left"></sidenav>
+
+      <md-content id="app-content" ui-view></md-content>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
